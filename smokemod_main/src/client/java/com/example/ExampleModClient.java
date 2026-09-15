@@ -224,8 +224,4 @@ public class ExampleModClient implements ClientModInitializer {
 	}
 }
 
-// Client-side initialization and visual effects are registered above.
-// Конец клиентской инициализации мода.
-// Дополнительный комментарий в конце файла.
-// Ещё один комментарий.
-// И ещё один комментарий.
+
