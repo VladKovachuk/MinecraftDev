@@ -1,0 +1,9 @@
+{
+  "variants": {
+    "finished=false,water_level=0": {"model": "smokemod:block/cookpot"},
+    "finished=false,water_level=1": {"model": "smokemod:block/cookpot_water1"},
+    "finished=false,water_level=2": {"model": "smokemod:block/cookpot_water2"},
+    "finished=false,water_level=3": {"model": "smokemod:block/cookpot_water3"},
+    "finished=true": {"model": "smokemod:block/cookpot_finished"}
+  }
+}

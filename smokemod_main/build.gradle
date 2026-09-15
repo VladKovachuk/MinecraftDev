@@ -44,6 +44,14 @@ loom {
 			runDir 'build/client-smoke-test'
 			programArgs '--username', 'EffectTest', '--width', '640', '--height', '360'
 		}
+		cookpotSmokeTest {
+			client()
+			name = 'Cookpot model and screen smoke test'
+			source sourceSets.clientTest
+			runDir 'build/cookpot-smoke-test'
+			vmArg '-Dsmokemod.cookpotSmokeTest=true'
+			programArgs '--username', 'CookpotTest', '--width', '960', '--height', '640'
+		}
 	}
 
 	mods {

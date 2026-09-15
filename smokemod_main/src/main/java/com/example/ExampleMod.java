@@ -1,11 +1,18 @@
 package com.example;
 
 import com.example.block.DryingTableBlock;
+import com.example.block.CookpotBlock;
+import com.example.block.CookpotFrameBlock;
+import com.example.block.entity.CookpotBlockEntity;
+import com.example.screen.CookpotScreenHandler;
 import com.example.block.JarBlock;
 import com.example.block.TobaccoCropBlock;
 import com.example.block.CannabisCropBlock;
+import com.example.block.OpiumPoppyCropBlock;
 import com.example.worldgen.CannabisPatchFeature;
 import com.example.worldgen.CannabisWorldGen;
+import com.example.worldgen.OpiumPoppyPatchFeature;
+import com.example.worldgen.OpiumPoppyWorldGen;
 import com.example.block.entity.DryingTableBlockEntity;
 import com.example.block.entity.JarBlockEntity;
 import com.example.screen.DryingTableScreenHandler;
@@ -84,6 +91,23 @@ public class ExampleMod implements ModInitializer {
 	public static final Item DRIED_CANNABIS_BUD = new Item(new Item.Settings());
 	public static final Item DRIED_CANNABIS_LEAF = new Item(new Item.Settings());
 	public static final Item CURED_CANNABIS_BUD = new Item(new Item.Settings());
+
+	// Опийный мак: 8 стадий, последние 3 стадии занимают два блока.
+	public static final OpiumPoppyCropBlock OPIUM_POPPY = new OpiumPoppyCropBlock(
+			AbstractBlock.Settings.copy(Blocks.WHEAT));
+	public static final Item POPPY_SEEDS = new AliasedBlockItem(OPIUM_POPPY, new Item.Settings());
+	public static final Item RAW_OPIUM = new Item(new Item.Settings());
+	public static final Item RAW_OPIUM_CHUNK = new Item(new Item.Settings());
+	public static final Item REFINED_OPIUM = new Item(new Item.Settings());
+	public static final Item OPIUM = new Item(new Item.Settings());
+	public static final CookpotFrameBlock COOKPOT_FRAME = new CookpotFrameBlock(
+			AbstractBlock.Settings.copy(Blocks.IRON_BLOCK).nonOpaque().luminance(state -> state.get(CookpotFrameBlock.LIT) ? 13 : 0));
+	public static final BlockItem COOKPOT_FRAME_ITEM = new BlockItem(COOKPOT_FRAME, new Item.Settings());
+	public static final CookpotBlock COOKPOT = new CookpotBlock(
+			AbstractBlock.Settings.copy(Blocks.COPPER_BLOCK).nonOpaque());
+	public static final BlockItem COOKPOT_ITEM = new BlockItem(COOKPOT, new Item.Settings());
+	public static BlockEntityType<CookpotBlockEntity> COOKPOT_BLOCK_ENTITY;
+	public static ScreenHandlerType<CookpotScreenHandler> COOKPOT_SCREEN_HANDLER;
 
 	// Стол для сушки
 	public static final DryingTableBlock DRYING_TABLE = new DryingTableBlock(
@@ -168,6 +192,13 @@ public class ExampleMod implements ModInitializer {
 				entries.add(DRIED_CANNABIS_BUD);
 				entries.add(CURED_CANNABIS_BUD);
 				entries.add(DRIED_CANNABIS_LEAF);
+				entries.add(POPPY_SEEDS);
+				entries.add(RAW_OPIUM);
+				entries.add(RAW_OPIUM_CHUNK);
+				entries.add(REFINED_OPIUM);
+				entries.add(OPIUM);
+				entries.add(COOKPOT_FRAME_ITEM);
+				entries.add(COOKPOT_ITEM);
 				entries.add(GREEN_TOBACCO_LEAF);
 				entries.add(DRIED_TOBACCO_LEAF);
 				entries.add(CHOPPED_TOBACCO);
@@ -179,6 +210,16 @@ public class ExampleMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+        Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "refined_opium"), REFINED_OPIUM);
+        Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "opium"), OPIUM);
+        Registry.register(Registries.BLOCK, Identifier.of(MOD_ID, "cookpot_frame"), COOKPOT_FRAME);
+        Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "cookpot_frame"), COOKPOT_FRAME_ITEM);
+        Registry.register(Registries.BLOCK, Identifier.of(MOD_ID, "cookpot"), COOKPOT);
+        Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "cookpot"), COOKPOT_ITEM);
+        COOKPOT_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE, Identifier.of(MOD_ID, "cookpot"),
+                BlockEntityType.Builder.create(CookpotBlockEntity::new, COOKPOT).build(null));
+        COOKPOT_SCREEN_HANDLER = Registry.register(Registries.SCREEN_HANDLER, Identifier.of(MOD_ID, "cookpot"),
+                new ScreenHandlerType<>(CookpotScreenHandler::new, net.minecraft.resource.featuretoggle.FeatureFlags.VANILLA_FEATURES));
         com.example.block.entity.JarCuringClock.register();
 		// Регистрация звуков в реестре
 		Registry.register(Registries.SOUND_EVENT, SOUND_CIGARETTE_ID, SOUND_CIGARETTE);
@@ -238,6 +279,13 @@ public class ExampleMod implements ModInitializer {
 		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "dried_cannabis_bud"), DRIED_CANNABIS_BUD);
 		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "cured_cannabis_bud"), CURED_CANNABIS_BUD);
 		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "dried_cannabis_leaf"), DRIED_CANNABIS_LEAF);
+		Registry.register(Registries.BLOCK, Identifier.of(MOD_ID, "opium_poppy"), OPIUM_POPPY);
+		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "poppy_seeds"), POPPY_SEEDS);
+		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "raw_opium"), RAW_OPIUM);
+		Registry.register(Registries.ITEM, Identifier.of(MOD_ID, "raw_opium_chunk"), RAW_OPIUM_CHUNK);
+		Registry.register(Registries.FEATURE, Identifier.of(MOD_ID, "opium_poppy_patch"),
+				new OpiumPoppyPatchFeature(DefaultFeatureConfig.CODEC));
+		OpiumPoppyWorldGen.register();
 		Registry.register(Registries.FEATURE, Identifier.of(MOD_ID, "cannabis_patch"), new CannabisPatchFeature(DefaultFeatureConfig.CODEC));
 		CannabisWorldGen.register();
 

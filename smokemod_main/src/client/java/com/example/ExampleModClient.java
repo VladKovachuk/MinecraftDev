@@ -7,6 +7,7 @@ import com.example.nicotine.NicotineManager;
 import com.example.particle.CigaretteCloudParticle;
 import com.example.screen.DryingTableScreen;
 import com.example.screen.JarScreen;
+import com.example.screen.CookpotScreen;
 import com.example.shader.ShaderManager;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientLifecycleEvents;
@@ -49,7 +50,9 @@ public class ExampleModClient implements ClientModInitializer {
 		// Прозрачный слой рендеринга — прозрачные пиксели текстуры не черные
 		BlockRenderLayerMap.INSTANCE.putBlock(ExampleMod.TOBACCO_CROP, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ExampleMod.CANNABIS_CROP, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ExampleMod.OPIUM_POPPY, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ExampleMod.DRYING_TABLE, RenderLayer.getCutout());
+		BlockRenderLayerMap.INSTANCE.putBlock(ExampleMod.COOKPOT_FRAME, RenderLayer.getCutout());
 		BlockRenderLayerMap.INSTANCE.putBlock(ExampleMod.JAR, RenderLayer.getTranslucent());
 		BlockRenderLayerMap.INSTANCE.putBlock(ExampleMod.JAR_LARGE, RenderLayer.getTranslucent());
 		LayeredJarModel.register();
@@ -58,6 +61,7 @@ public class ExampleModClient implements ClientModInitializer {
 		HandledScreens.register(ExampleMod.DRYING_TABLE_SCREEN_HANDLER, DryingTableScreen::new);
 		HandledScreens.register(ExampleMod.JAR_SCREEN_HANDLER, JarScreen::new);
 		HandledScreens.register(ExampleMod.JAR_LARGE_SCREEN_HANDLER, JarScreen::new);
+		HandledScreens.register(ExampleMod.COOKPOT_SCREEN_HANDLER, CookpotScreen::new);
 		BlockEntityRendererRegistry.register(ExampleMod.DRYING_TABLE_BLOCK_ENTITY, DryingTableBlockEntityRenderer::new);
 
 		// Инициализируем менеджер шейдеров

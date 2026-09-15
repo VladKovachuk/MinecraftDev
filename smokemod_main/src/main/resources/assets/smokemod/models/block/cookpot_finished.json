@@ -1,0 +1,6 @@
+{
+  "parent": "smokemod:block/cookpot_water3",
+  "textures": {
+    "1": "smokemod:block/cookpot_finished"
+  }
+}

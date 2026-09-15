@@ -1,0 +1,413 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/block",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "smokemod:block/cookpot_frame",
+		"particle": "smokemod:block/cookpot_frame",
+		"fire": "block/fire_0",
+		"netherrack": "block/netherrack"
+	},
+	"elements": [
+		{
+			"name": "Square iron leg 1 1",
+			"from": [1, 0, 1],
+			"to": [3, 14, 3],
+			"faces": {
+				"north": {"uv": [0.5, 0.5, 1.5, 7.5], "texture": "#0"},
+				"east": {"uv": [0.5, 0.5, 1.5, 7.5], "texture": "#0"},
+				"south": {"uv": [0.5, 0.5, 1.5, 7.5], "texture": "#0"},
+				"west": {"uv": [0.5, 0.5, 1.5, 7.5], "texture": "#0"},
+				"up": {"uv": [0.5, 0.5, 1.5, 1.5], "texture": "#0"},
+				"down": {"uv": [0.5, 0.5, 1.5, 1.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Wide foot 1 1",
+			"from": [0.5, 0, 0.5],
+			"to": [3.5, 1, 3.5],
+			"faces": {
+				"north": {"uv": [8.5, 0.5, 10, 1], "texture": "#0"},
+				"east": {"uv": [8.5, 0.5, 10, 1], "texture": "#0"},
+				"south": {"uv": [8.5, 0.5, 10, 1], "texture": "#0"},
+				"west": {"uv": [8.5, 0.5, 10, 1], "texture": "#0"},
+				"up": {"uv": [8.5, 0.5, 10, 2], "texture": "#0"},
+				"down": {"uv": [8.5, 0.5, 10, 2], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Square iron leg 1 13",
+			"from": [1, 0, 13],
+			"to": [3, 14, 15],
+			"faces": {
+				"north": {"uv": [0.5, 0.5, 1.5, 7.5], "texture": "#0"},
+				"east": {"uv": [0.5, 0.5, 1.5, 7.5], "texture": "#0"},
+				"south": {"uv": [0.5, 0.5, 1.5, 7.5], "texture": "#0"},
+				"west": {"uv": [0.5, 0.5, 1.5, 7.5], "texture": "#0"},
+				"up": {"uv": [0.5, 0.5, 1.5, 1.5], "texture": "#0"},
+				"down": {"uv": [0.5, 0.5, 1.5, 1.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Wide foot 1 13",
+			"from": [0.5, 0, 12.5],
+			"to": [3.5, 1, 15.5],
+			"faces": {
+				"north": {"uv": [8.5, 0.5, 10, 1], "texture": "#0"},
+				"east": {"uv": [8.5, 0.5, 10, 1], "texture": "#0"},
+				"south": {"uv": [8.5, 0.5, 10, 1], "texture": "#0"},
+				"west": {"uv": [8.5, 0.5, 10, 1], "texture": "#0"},
+				"up": {"uv": [8.5, 0.5, 10, 2], "texture": "#0"},
+				"down": {"uv": [8.5, 0.5, 10, 2], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Square iron leg 13 1",
+			"from": [13, 0, 1],
+			"to": [15, 14, 3],
+			"faces": {
+				"north": {"uv": [0.5, 0.5, 1.5, 7.5], "texture": "#0"},
+				"east": {"uv": [0.5, 0.5, 1.5, 7.5], "texture": "#0"},
+				"south": {"uv": [0.5, 0.5, 1.5, 7.5], "texture": "#0"},
+				"west": {"uv": [0.5, 0.5, 1.5, 7.5], "texture": "#0"},
+				"up": {"uv": [0.5, 0.5, 1.5, 1.5], "texture": "#0"},
+				"down": {"uv": [0.5, 0.5, 1.5, 1.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Wide foot 13 1",
+			"from": [12.5, 0, 0.5],
+			"to": [15.5, 1, 3.5],
+			"faces": {
+				"north": {"uv": [8.5, 0.5, 10, 1], "texture": "#0"},
+				"east": {"uv": [8.5, 0.5, 10, 1], "texture": "#0"},
+				"south": {"uv": [8.5, 0.5, 10, 1], "texture": "#0"},
+				"west": {"uv": [8.5, 0.5, 10, 1], "texture": "#0"},
+				"up": {"uv": [8.5, 0.5, 10, 2], "texture": "#0"},
+				"down": {"uv": [8.5, 0.5, 10, 2], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Square iron leg 13 13",
+			"from": [13, 0, 13],
+			"to": [15, 14, 15],
+			"faces": {
+				"north": {"uv": [0.5, 0.5, 1.5, 7.5], "texture": "#0"},
+				"east": {"uv": [0.5, 0.5, 1.5, 7.5], "texture": "#0"},
+				"south": {"uv": [0.5, 0.5, 1.5, 7.5], "texture": "#0"},
+				"west": {"uv": [0.5, 0.5, 1.5, 7.5], "texture": "#0"},
+				"up": {"uv": [0.5, 0.5, 1.5, 1.5], "texture": "#0"},
+				"down": {"uv": [0.5, 0.5, 1.5, 1.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Wide foot 13 13",
+			"from": [12.5, 0, 12.5],
+			"to": [15.5, 1, 15.5],
+			"faces": {
+				"north": {"uv": [8.5, 0.5, 10, 1], "texture": "#0"},
+				"east": {"uv": [8.5, 0.5, 10, 1], "texture": "#0"},
+				"south": {"uv": [8.5, 0.5, 10, 1], "texture": "#0"},
+				"west": {"uv": [8.5, 0.5, 10, 1], "texture": "#0"},
+				"up": {"uv": [8.5, 0.5, 10, 2], "texture": "#0"},
+				"down": {"uv": [8.5, 0.5, 10, 2], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Top rail front",
+			"from": [1, 14, 1],
+			"to": [15, 16, 3],
+			"faces": {
+				"north": {"uv": [8.5, 0.5, 15.5, 1.5], "texture": "#0"},
+				"east": {"uv": [8.5, 0.5, 9.5, 1.5], "texture": "#0"},
+				"south": {"uv": [8.5, 0.5, 15.5, 1.5], "texture": "#0"},
+				"west": {"uv": [8.5, 0.5, 9.5, 1.5], "texture": "#0"},
+				"up": {"uv": [8.5, 0.5, 15.5, 1.5], "texture": "#0"},
+				"down": {"uv": [8.5, 0.5, 15.5, 1.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Top rail rear",
+			"from": [1, 14, 13],
+			"to": [15, 16, 15],
+			"faces": {
+				"north": {"uv": [8.5, 0.5, 15.5, 1.5], "texture": "#0"},
+				"east": {"uv": [8.5, 0.5, 9.5, 1.5], "texture": "#0"},
+				"south": {"uv": [8.5, 0.5, 15.5, 1.5], "texture": "#0"},
+				"west": {"uv": [8.5, 0.5, 9.5, 1.5], "texture": "#0"},
+				"up": {"uv": [8.5, 0.5, 15.5, 1.5], "texture": "#0"},
+				"down": {"uv": [8.5, 0.5, 15.5, 1.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Top rail left",
+			"from": [1, 14, 3],
+			"to": [3, 16, 13],
+			"faces": {
+				"north": {"uv": [8.5, 0.5, 9.5, 1.5], "texture": "#0"},
+				"east": {"uv": [8.5, 0.5, 13.5, 1.5], "texture": "#0"},
+				"south": {"uv": [8.5, 0.5, 9.5, 1.5], "texture": "#0"},
+				"west": {"uv": [8.5, 0.5, 13.5, 1.5], "texture": "#0"},
+				"up": {"uv": [8.5, 0.5, 9.5, 5.5], "texture": "#0"},
+				"down": {"uv": [8.5, 0.5, 9.5, 5.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Top rail right",
+			"from": [13, 14, 3],
+			"to": [15, 16, 13],
+			"faces": {
+				"north": {"uv": [8.5, 0.5, 9.5, 1.5], "texture": "#0"},
+				"east": {"uv": [8.5, 0.5, 13.5, 1.5], "texture": "#0"},
+				"south": {"uv": [8.5, 0.5, 9.5, 1.5], "texture": "#0"},
+				"west": {"uv": [8.5, 0.5, 13.5, 1.5], "texture": "#0"},
+				"up": {"uv": [8.5, 0.5, 9.5, 5.5], "texture": "#0"},
+				"down": {"uv": [8.5, 0.5, 9.5, 5.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Pot support crossbar front",
+			"from": [3, 15, 5],
+			"to": [13, 16, 6],
+			"faces": {
+				"north": {"uv": [0.5, 0.5, 5.5, 1], "texture": "#0"},
+				"east": {"uv": [0.5, 0.5, 1, 1], "texture": "#0"},
+				"south": {"uv": [0.5, 0.5, 5.5, 1], "texture": "#0"},
+				"west": {"uv": [0.5, 0.5, 1, 1], "texture": "#0"},
+				"up": {"uv": [0.5, 0.5, 5.5, 1], "texture": "#0"},
+				"down": {"uv": [0.5, 0.5, 5.5, 1], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Pot support crossbar rear",
+			"from": [3, 15, 10],
+			"to": [13, 16, 11],
+			"faces": {
+				"north": {"uv": [0.5, 0.5, 5.5, 1], "texture": "#0"},
+				"east": {"uv": [0.5, 0.5, 1, 1], "texture": "#0"},
+				"south": {"uv": [0.5, 0.5, 5.5, 1], "texture": "#0"},
+				"west": {"uv": [0.5, 0.5, 1, 1], "texture": "#0"},
+				"up": {"uv": [0.5, 0.5, 5.5, 1], "texture": "#0"},
+				"down": {"uv": [0.5, 0.5, 5.5, 1], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Low fire tray",
+			"from": [3, 1, 3],
+			"to": [13, 2, 13],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 2], "texture": "#netherrack"},
+				"east": {"uv": [0, 0, 16, 2], "texture": "#netherrack"},
+				"south": {"uv": [0, 0, 16, 2], "texture": "#netherrack"},
+				"west": {"uv": [0, 0, 16, 2], "texture": "#netherrack"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#netherrack"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#netherrack"}
+			}
+		},
+		{
+			"name": "Tray retaining edge 3",
+			"from": [2.5, 2, 3],
+			"to": [13.5, 3, 4],
+			"faces": {
+				"north": {"uv": [0.5, 0.5, 6, 1], "texture": "#0"},
+				"east": {"uv": [0.5, 0.5, 1, 1], "texture": "#0"},
+				"south": {"uv": [0.5, 0.5, 6, 1], "texture": "#0"},
+				"west": {"uv": [0.5, 0.5, 1, 1], "texture": "#0"},
+				"up": {"uv": [0.5, 0.5, 6, 1], "texture": "#0"},
+				"down": {"uv": [0.5, 0.5, 6, 1], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Tray retaining edge 12",
+			"from": [2.5, 2, 12],
+			"to": [13.5, 3, 13],
+			"faces": {
+				"north": {"uv": [0.5, 0.5, 6, 1], "texture": "#0"},
+				"east": {"uv": [0.5, 0.5, 1, 1], "texture": "#0"},
+				"south": {"uv": [0.5, 0.5, 6, 1], "texture": "#0"},
+				"west": {"uv": [0.5, 0.5, 1, 1], "texture": "#0"},
+				"up": {"uv": [0.5, 0.5, 6, 1], "texture": "#0"},
+				"down": {"uv": [0.5, 0.5, 6, 1], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Tray retaining side 3",
+			"from": [3, 2, 4],
+			"to": [4, 3, 12],
+			"faces": {
+				"north": {"uv": [0.5, 0.5, 1, 1], "texture": "#0"},
+				"east": {"uv": [0.5, 0.5, 4.5, 1], "texture": "#0"},
+				"south": {"uv": [0.5, 0.5, 1, 1], "texture": "#0"},
+				"west": {"uv": [0.5, 0.5, 4.5, 1], "texture": "#0"},
+				"up": {"uv": [0.5, 0.5, 1, 4.5], "texture": "#0"},
+				"down": {"uv": [0.5, 0.5, 1, 4.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Tray retaining side 12",
+			"from": [12, 2, 4],
+			"to": [13, 3, 12],
+			"faces": {
+				"north": {"uv": [0.5, 0.5, 1, 1], "texture": "#0"},
+				"east": {"uv": [0.5, 0.5, 4.5, 1], "texture": "#0"},
+				"south": {"uv": [0.5, 0.5, 1, 1], "texture": "#0"},
+				"west": {"uv": [0.5, 0.5, 4.5, 1], "texture": "#0"},
+				"up": {"uv": [0.5, 0.5, 1, 4.5], "texture": "#0"},
+				"down": {"uv": [0.5, 0.5, 1, 4.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Hearth grate 5",
+			"from": [5, 2, 4],
+			"to": [5.65, 2.65, 12],
+			"faces": {
+				"north": {"uv": [8.5, 0.5, 9, 1], "texture": "#0"},
+				"east": {"uv": [8.5, 0.5, 12.5, 1], "texture": "#0"},
+				"south": {"uv": [8.5, 0.5, 9, 1], "texture": "#0"},
+				"west": {"uv": [8.5, 0.5, 12.5, 1], "texture": "#0"},
+				"up": {"uv": [8.5, 0.5, 9, 4.5], "texture": "#0"},
+				"down": {"uv": [8.5, 0.5, 9, 4.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Hearth grate 7.5",
+			"from": [7.5, 2, 4],
+			"to": [8.15, 2.65, 12],
+			"faces": {
+				"north": {"uv": [8.5, 0.5, 9, 1], "texture": "#0"},
+				"east": {"uv": [8.5, 0.5, 12.5, 1], "texture": "#0"},
+				"south": {"uv": [8.5, 0.5, 9, 1], "texture": "#0"},
+				"west": {"uv": [8.5, 0.5, 12.5, 1], "texture": "#0"},
+				"up": {"uv": [8.5, 0.5, 9, 4.5], "texture": "#0"},
+				"down": {"uv": [8.5, 0.5, 9, 4.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Hearth grate 10",
+			"from": [10, 2, 4],
+			"to": [10.65, 2.65, 12],
+			"faces": {
+				"north": {"uv": [8.5, 0.5, 9, 1], "texture": "#0"},
+				"east": {"uv": [8.5, 0.5, 12.5, 1], "texture": "#0"},
+				"south": {"uv": [8.5, 0.5, 9, 1], "texture": "#0"},
+				"west": {"uv": [8.5, 0.5, 12.5, 1], "texture": "#0"},
+				"up": {"uv": [8.5, 0.5, 9, 4.5], "texture": "#0"},
+				"down": {"uv": [8.5, 0.5, 9, 4.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Rivet 1.6 0.85",
+			"from": [1.6, 14.6, 0.85],
+			"to": [2.4, 15.4, 1.05],
+			"faces": {
+				"north": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"},
+				"east": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"},
+				"south": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"},
+				"west": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"},
+				"up": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"},
+				"down": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Rivet 1.6 15",
+			"from": [1.6, 14.6, 15],
+			"to": [2.4, 15.4, 15.2],
+			"faces": {
+				"north": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"},
+				"east": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"},
+				"south": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"},
+				"west": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"},
+				"up": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"},
+				"down": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Rivet 13.6 0.85",
+			"from": [13.6, 14.6, 0.85],
+			"to": [14.4, 15.4, 1.05],
+			"faces": {
+				"north": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"},
+				"east": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"},
+				"south": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"},
+				"west": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"},
+				"up": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"},
+				"down": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Rivet 13.6 15",
+			"from": [13.6, 14.6, 15],
+			"to": [14.4, 15.4, 15.2],
+			"faces": {
+				"north": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"},
+				"east": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"},
+				"south": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"},
+				"west": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"},
+				"up": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"},
+				"down": {"uv": [8.5, 8.5, 9, 9], "texture": "#0"}
+			}
+		},
+		{
+			"name": "Crossed flame 0",
+			"from": [2.5, 2.7, 8],
+			"to": [13.5, 14, 8],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#fire"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#fire"}
+			}
+		},
+		{
+			"name": "Crossed flame 1",
+			"from": [8, 2.7, 2.5],
+			"to": [8, 14, 13.5],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 8]},
+			"faces": {
+				"east": {"uv": [0, 0, 16, 16], "texture": "#fire"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#fire"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [75, 45, 0],
+			"translation": [0, 2.5, 0],
+			"scale": [0.4, 0.4, 0.4]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"translation": [0, 2, 0],
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"ground": {
+			"translation": [0, 3, 0],
+			"scale": [0.35, 0.35, 0.35]
+		},
+		"gui": {
+			"rotation": [30, -135, 0],
+			"scale": [0.62, 0.62, 0.62]
+		},
+		"fixed": {
+			"scale": [0.6, 0.6, 0.6]
+		}
+	},
+	"groups": [
+		{
+			"name": "Forged iron support frame",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+		},
+		{
+			"name": "Flame inside frame",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [26, 27]
+		}
+	]
+}

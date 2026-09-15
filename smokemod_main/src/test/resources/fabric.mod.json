@@ -8,7 +8,8 @@
     "fabric-gametest": [
       "com.example.block.entity.DryingTableRegressionTest",
       "com.example.block.entity.JarRegressionTest",
-      "com.example.effects.SmokingEffectGameTest"
+      "com.example.effects.SmokingEffectGameTest",
+      "com.example.block.entity.CookpotRegressionTest"
     ]
   }
 }

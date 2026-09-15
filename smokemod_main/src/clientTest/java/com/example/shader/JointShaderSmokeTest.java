@@ -24,6 +24,7 @@ public final class JointShaderSmokeTest implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
+        if (Boolean.getBoolean("smokemod.cookpotSmokeTest")) return;
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             if (ran || client.getOverlay() != null) return;
             ran = true;

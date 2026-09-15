@@ -5,6 +5,6 @@
   "name": "Smoke Mod client shader tests",
   "environment": "client",
   "entrypoints": {
-    "client": ["com.example.shader.JointShaderSmokeTest"]
+    "client": ["com.example.shader.JointShaderSmokeTest", "com.example.screen.CookpotClientSmokeTest"]
   }
 }

@@ -5,7 +5,6 @@ import com.example.block.entity.JarBlockEntity;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.screen.ingame.HandledScreen;
 import net.minecraft.entity.player.PlayerInventory;
-import net.minecraft.screen.slot.Slot;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
@@ -21,18 +20,10 @@ public class JarScreen extends HandledScreen<JarScreenHandler> {
     @Override
     protected void drawBackground(DrawContext context, float delta, int mouseX, int mouseY) {
         context.drawTexture(TEXTURE, x, y, 0, 0, backgroundWidth, backgroundHeight,
-                backgroundWidth, backgroundHeight);
-        for (Slot slot : handler.slots) {
-            drawWoodenSlot(context, x + slot.x, y + slot.y, slot.id == 0);
-        }
-    }
-
-    private static void drawWoodenSlot(DrawContext context, int x, int y, boolean jar) {
-        int edge = jar ? 0xFFA9BDA0 : 0xFF9C7A48;
-        context.fill(x - 1, y - 1, x + 17, y + 17, 0xFF17120C);
-        context.fill(x, y, x + 17, y + 17, edge);
-        context.fill(x, y, x + 16, y + 16, 0xFF32281C);
-        context.fill(x + 1, y + 1, x + 15, y + 15, 0xFF403221);
+                256, 256);
+        int fill = Math.round(142 * handler.getCuringProgress());
+        if (fill > 0)
+            context.drawTexture(TEXTURE, x + 17, y + 124, 0, 240, fill, 7, 256, 256);
     }
 
     @Override
@@ -40,19 +31,12 @@ public class JarScreen extends HandledScreen<JarScreenHandler> {
         context.drawCenteredTextWithShadow(textRenderer, title, backgroundWidth / 2, 15, 0xF1DFC0);
         Text counter = Text.translatable("gui.smokemod.jar_count", handler.getStoredCount(), handler.getCapacity());
         context.drawCenteredTextWithShadow(textRenderer, counter, backgroundWidth / 2, 98, 0xF1DFC0);
-        context.drawText(textRenderer, playerInventoryTitle, 8, 136, 0xD6C3A1, false);
+        context.drawText(textRenderer, playerInventoryTitle, 8, 136, 0x404040, false);
         int percent = Math.round(handler.getCuringProgress() * 100);
         Text status = handler.isCured() ? Text.translatable("gui.smokemod.jar_ready")
                 : handler.isCuring() ? Text.translatable("gui.smokemod.jar_curing", percent)
                 : Text.translatable("gui.smokemod.jar_waiting");
         context.drawCenteredTextWithShadow(textRenderer, status, 88, 110, 0xF1DFC0);
-        int fill = Math.round(142 * handler.getCuringProgress());
-        if (fill > 0) {
-            context.fill(17, 124, 17 + fill, 131, 0xFF6E913C);
-            context.fill(17, 124, 17 + fill, 126, 0xFFB6CC70);
-            context.fill(17, 130, 17 + fill, 131, 0xFF425C26);
-            context.fill(16 + fill, 124, 17 + fill, 130, 0xFFD7E79A);
-        }
     }
 
     @Override

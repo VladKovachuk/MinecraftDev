@@ -16,7 +16,7 @@ public class JarScreenHandler extends ScreenHandler {
     public static final int SMALL_CAPACITY = 16;
     public static final int LARGE_CAPACITY = 64;
     public static final int JAR_SLOT_X = 80;
-    public static final int JAR_SLOT_Y = 57;
+    public static final int JAR_SLOT_Y = 59;
     private static final int PLAYER_START = 1;
     private static final int HOTBAR_START = 28;
     private static final int PLAYER_END = 37;

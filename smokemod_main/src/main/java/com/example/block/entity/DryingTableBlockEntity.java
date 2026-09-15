@@ -70,6 +70,7 @@ public class DryingTableBlockEntity extends BlockEntity implements Inventory, Na
         if (stack.isOf(ExampleMod.GREEN_TOBACCO_LEAF)) return ExampleMod.DRIED_TOBACCO_LEAF;
         if (stack.isOf(ExampleMod.CANNABIS_BUD)) return ExampleMod.DRIED_CANNABIS_BUD;
         if (stack.isOf(ExampleMod.GREEN_CANNABIS_LEAF)) return ExampleMod.DRIED_CANNABIS_LEAF;
+        if (stack.isOf(ExampleMod.REFINED_OPIUM)) return ExampleMod.OPIUM;
         return null;
     }
 
