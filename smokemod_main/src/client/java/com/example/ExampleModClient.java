@@ -224,4 +224,7 @@ public class ExampleModClient implements ClientModInitializer {
 	}
 }
 
+// Конец клиентской инициализации мода.
+// Комментарий добавлен в конец файла.
+
 
