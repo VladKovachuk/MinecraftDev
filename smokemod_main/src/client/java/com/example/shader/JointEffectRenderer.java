@@ -121,7 +121,7 @@ public final class JointEffectRenderer {
         float motion = MathHelper.clamp((float) Math.hypot(yawSpeed, pitchSpeed) / 140.0f, 0.0f, 1.0f);
         float value = combinedStrength();
         float historyWeight = motion > 0.015f
-                ? (float) Math.pow(0.72f * value * motion, seconds * 60.0f) : 0.0f;
+                ? (float) Math.pow(0.3f * value * motion, seconds * 60.0f) : 0.0f;
         ShaderManager.setUniform(processor, "Strength", value);
         ShaderManager.setUniform(processor, "CuredStrength", curedStrength.value());
         ShaderManager.setUniform(processor, "EffectTime", animationSeconds);
@@ -129,8 +129,8 @@ public final class JointEffectRenderer {
         for (var pass : ((PostEffectProcessorAccessor) processor).getPasses()) {
             var direction = pass.getProgram().getUniformByName("MotionDirection");
             if (direction != null) {
-                direction.set(MathHelper.clamp(yawSpeed / 180.0f * 0.025f * value, -0.06f, 0.06f),
-                        MathHelper.clamp(-pitchSpeed / 180.0f * 0.025f * value, -0.06f, 0.06f));
+                // Disable directional blur for both joints; frame history remains independent.
+                direction.set(0.0f, 0.0f);
             }
         }
         ShaderManager.renderProcessor(processor, tickDelta);

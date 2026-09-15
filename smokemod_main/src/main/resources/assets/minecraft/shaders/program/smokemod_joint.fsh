@@ -38,19 +38,19 @@ vec2 distortedUv(vec2 uv, float strength) {
 
     // Gentle central twist that slowly reverses direction.
     float radius = length(p);
-    float twist = strength * (0.66 * sin(EffectTime * 0.38) + 0.16 * sin(EffectTime * 0.23))
-            * (1.0 - smoothstep(0.0, 0.85, radius));
+    float twist = strength * (0.16 * sin(EffectTime * 0.19) + 0.04 * sin(EffectTime * 0.11))
+            * (1.0 - smoothstep(0.0, 0.45, radius));
     warped = rotation(twist) * warped;
-    warped += vec2(sin(p.y * 8.0 + ticks * 3.14159265 / 190.0),
-                   sin(p.x * 7.0 - ticks * 3.14159265 / 170.0))
-            * (0.008 * strength * smoothstep(0.0, 0.15, radius));
+    warped += vec2(sin(p.y * 12.0 + ticks * 3.14159265 / 190.0),
+                   sin(p.x * 10.5 - ticks * 3.14159265 / 170.0))
+            * (0.012 * strength * smoothstep(0.0, 0.15, radius));
 
     // Cured-only breathing: a slow, small expansion/contraction around the fixed crosshair.
-    warped *= 1.0 + 0.018 * strength * sin(EffectTime * 0.72);
+    warped *= 1.0 + 0.04 * strength * sin(EffectTime * 1.8);
 
     // Anchor the border so twisting never exposes black corners or mirrored terrain.
     vec2 edge = min(uv, 1.0 - uv);
-    float edgeFade = smoothstep(0.0, 0.16, min(edge.x, edge.y));
+    float edgeFade = smoothstep(0.0, 0.08, min(edge.x, edge.y));
     vec2 result = uv + (warped - p) / vec2(aspect, 1.0) * edgeFade;
     vec2 halfPixel = 0.5 / InSize;
     return clamp(result, halfPixel, 1.0 - halfPixel);
