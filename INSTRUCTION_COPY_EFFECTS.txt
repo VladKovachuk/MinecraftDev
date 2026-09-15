@@ -1,0 +1,475 @@
+================================================================================
+ИНСТРУКЦИЯ: Как копировать эффекты из Psychedelicraft-Legacy-1.7.10 в SmokeMod 1.20.1
+================================================================================
+
+СОДЕРЖАНИЕ:
+1. Структура Psychedelicraft-Legacy-1.7.10
+2. Как работает система эффектов в Psychedelicraft-Legacy-1.7.10
+3. Структура SmokeMod 1.20.1
+4. Пошаговая инструкция по копированию эффектов
+5. Пример: копирование эффекта размытия (blur)
+6. Пример: копирование эффекта цветового вращения (color rotation)
+7. Пример: копирование эффекта цифрового шума (digital)
+8. Таблица соответствия файлов и классов
+9. Советы и рекомендации
+
+
+================================================================================
+1. СТРУКТУРА Psychedelicraft-Legacy-1.7.10
+================================================================================
+
+Папка проекта:
+Psychedelicraft-Legacy-1.7.10/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── ivorius/
+│   │   │       └── psychedelicraft/
+│   │   │           ├── entities/
+│   │   │           │   └── drugs/
+│   │   │           │       ├── Drug.java                    - Определение наркотика
+│   │   │           │       ├── DrugProperties.java           - Свойства эффектов игрока
+│   │   │           │       └── DrugHallucinationManager.java  - Менеджер галлюцинаций
+│   │   │           ├── client/
+│   │   │           │   └── rendering/
+│   │   │           │       ├── DrugRenderer.java             - Главный рендерер эффектов
+│   │   │           │       ├── DrugEffectInterpreter.java     - Интерпретатор эффектов
+│   │   │           │       └── effectWrappers/
+│   │   │           │           ├── EffectWrapper.java         - Интерфейс эффекта
+│   │   │           │           ├── ShaderWrapper.java         - Базовый класс шейдера
+│   │   │           │           ├── WrapperSimpleEffects.java   - Эффект серости и цвета
+│   │   │           │           ├── WrapperBlur.java            - Эффект размытия
+│   │   │           │           ├── WrapperBloom.java          - Эффект свечения
+│   │   │           │           ├── WrapperDigital.java        - Цифровой эффект
+│   │   │           │           └── ... (другие обертки)
+│   │   │           └── shaders/
+│   │   │               ├── ShaderSimpleEffects.java           - Шейдер простых эффектов
+│   │   │               ├── ShaderBlur.java                    - Шейдер размытия
+│   │   │               └── ... (другие шейдеры)
+│   │   └── resources/
+│   │       └── assets/
+│   │           └── psychedelicraft/
+│   │               └── shaders/
+│   │                   ├── shaderUtils.frag                  - Утилиты GLSL
+│   │                   ├── shaderSimpleEffects.frag           - Простой эффект
+│   │                   ├── shaderBlur.frag                    - Размытие
+│   │                   ├── shaderBloom.frag                   - Свечение
+│   │                   ├── shaderDigital.frag                 - Цифровой эффект
+│   │                   ├── shaderBasic.vert                   - Базовый вершинный шейдер
+│   │                   └── ... (другие шейдеры)
+
+
+================================================================================
+2. КАК РАБОТАЕТ СИСТЕМА ЭФФЕКТОВ В Psychedelicraft-Legacy-1.7.10
+================================================================================
+
+ОБЩАЯ АРХИТЕКТУРА:
+
+1. Drug.java - Определяет тип наркотика и его эффекты
+   - Содержит константы для силы эффектов (например, DESATURATION_HALLUCINATION_STRENGTH = 0.2F)
+   - Определяет, какие эффекты дает этот наркотик
+
+2. DrugProperties.java - Хранит текущее состояние эффектов игрока
+   - Содержит DrugHallucinationManager для управления галлюцинациями
+   - Хранит значения всех активных эффектов
+
+3. DrugHallucinationManager.java - Управляет галлюцинациями
+   - Хранит текущие значения эффектов (серость, размытие, вращение цвета и т.д.)
+   - Обновляет значения каждый тик
+   - Предоставляет методы для получения текущих значений эффектов
+
+4. DrugRenderer.java - Главный рендерер эффектов
+   - Создает экземпляры всех оберток эффектов (WrapperSimpleEffects, WrapperBlur и т.д.)
+   - Вызывает методы apply() для каждой обертки в каждом кадре
+   - Управляет порядком применения эффектов
+
+5. EffectWrapper.java - Интерфейс для всех эффектов
+   - Метод alloc() - выделяет ресурсы для эффекта
+   - Метод dealloc() - освобождает ресурсы
+   - Метод apply() - применяет эффект
+   - Метод update() - обновляет состояние эффекта
+
+6. ShaderWrapper.java - Базовый класс для шейдерных эффектов
+   - Наследуется от EffectWrapper
+   - Управляет загрузкой и применением шейдеров
+   - Использует IvShaderInstance2D для работы с шейдерами
+
+7. WrapperSimpleEffects.java - Пример обертки эффекта
+   - Наследуется от ShaderWrapper
+   - Создает экземпляр ShaderSimpleEffects
+   - В методе setShaderValues() устанавливает значения uniform переменных
+   - Получает значения из DrugHallucinationManager
+
+8. ShaderSimpleEffects.java - Класс шейдера
+   - Наследуется от IvShaderInstance2D
+   - Содержит поля для uniform переменных (desaturation, colorIntensification и т.д.)
+   - В методе apply() загружает шейдер и устанавливает uniform переменные
+   - В методе shouldApply() проверяет, нужно ли применять эффект
+
+9. GLSL шейдеры (.frag и .vert файлы)
+   - shaderUtils.frag - содержит вспомогательные функции (getDesaturatedColor и т.д.)
+   - shaderSimpleEffects.frag - фрагментный шейдер для простых эффектов
+   - shaderBlur.frag - фрагментный шейдер для размытия
+   - shaderBasic.vert - базовый вершинный шейдер
+
+ПОТОК ВЫПОЛНЕНИЯ:
+
+1. Игрок использует предмет (например, сигарету)
+2. DrugProperties обновляет значения эффектов
+3. DrugHallucinationManager вычисляет текущие значения эффектов
+4. В каждом кадре:
+   a. DrugRenderer вызывает apply() для каждой обертки эффекта
+   b. Обертка получает текущие значения из DrugHallucinationManager
+   c. Обертка устанавливает uniform переменные в шейдере
+   d. Шейдер применяется к экрану
+
+
+================================================================================
+3. СТРУКТУРА SmokeMod 1.20.1
+================================================================================
+
+Папка проекта:
+smokemod_main/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── example/
+│   │   │           ├── effects/
+│   │   │           │   └── EffectManager.java              - Менеджер эффектов
+│   │   │           ├── shader/
+│   │   │           │   └── ShaderManager.java               - Менеджер шейдеров
+│   │   │           └── item/
+│   │   │               └── CigaretteItem.java               - Предмет сигарета
+│   │   └── resources/
+│   │       └── assets/
+│   │           └── smokemod/
+│   │               ├── shaders/
+│   │               │   ├── include/
+│   │               │   │   └── get_desaturated_color.glsl    - Вспомогательные функции
+│   │               │   └── post/
+│   │               │       └── desaturation.fsh              - Шейдер эффекта
+│   │               └── post_effect/
+│   │                   └── desaturation.json                 - Конфигурация эффекта
+│   └── client/
+│       └── java/
+│           └── com/
+│               └── example/
+│                   └── ExampleModClient.java                 - Клиентская инициализация
+
+
+================================================================================
+4. ПОШАГОВАЯ ИНСТРУКЦИЯ ПО КОПИРОВАНИЮ ЭФФЕКТОВ
+================================================================================
+
+ШАГ 1: Определите, какой эффект хотите скопировать
+
+Откройте папку Psychedelicraft-Legacy-1.7.10/src/main/resources/assets/psychedelicraft/shaders/
+и посмотрите на доступные шейдеры:
+- shaderSimpleEffects.frag - простые эффекты (серость, вращение цвета, насыщенность)
+- shaderBlur.frag - размытие
+- shaderBloom.frag - свечение
+- shaderDigital.frag - цифровой эффект
+- shaderDoubleVision.frag - двойное зрение
+- shaderHeatDistortion.frag - искажение от жары
+- shaderRadialBlur.frag - радиальное размытие
+- и другие...
+
+ШАГ 2: Найдите соответствующий Wrapper класс
+
+Откройте папку Psychedelicraft-Legacy-1.7.10/src/main/java/ivorius/psychedelicraft/client/rendering/effectWrappers/
+и найдите обертку для нужного эффекта:
+- WrapperSimpleEffects.java - для shaderSimpleEffects.frag
+- WrapperBlur.java - для shaderBlur.frag
+- WrapperBloom.java - для shaderBloom.frag
+- WrapperDigital.java - для shaderDigital.frag
+- и т.д.
+
+ШАГ 3: Изучите GLSL код эффекта
+
+Откройте соответствующий .frag файл и изучите:
+- Какие uniform переменные используются
+- Какие функции вызываются
+- Какой эффект применяется к пикселям
+
+Например, для shaderSimpleEffects.frag:
+- uniform float desaturation - сила эффекта серости
+- uniform float slowColorRotation - медленное вращение цвета
+- uniform float quickColorRotation - быстрое вращение цвета
+- uniform float colorIntensification - насыщенность цвета
+- Функция getDesaturatedColor() - конвертация цвета в оттенки серого
+
+ШАГ 4: Проверьте, нужны ли вспомогательные функции
+
+Откройте shaderUtils.frag и проверьте, есть ли там функции, которые использует ваш эффект.
+Если есть, скопируйте их в отдельный .glsl файл в SmokeMod.
+
+Например, для эффекта серости нужна функция getDesaturatedColor().
+
+ШАГ 5: Создайте GLSL файлы в SmokeMod
+
+Создайте файлы в папке smokemod_main/src/main/resources/assets/smokemod/shaders/:
+
+1. Если нужны вспомогательные функции:
+   Создайте файл include/имя_функции.glsl и скопируйте туда функции из shaderUtils.frag
+
+2. Создайте файл post/имя_эффекта.fsh:
+   - Скопируйте содержимое .frag файла из Psychedelicraft
+   - Измените версию GLSL с 120 на 150
+   - Добавьте #moj_import для включения вспомогательных функций
+   - Измените uniform переменные и входные/выходные данные для Minecraft 1.20.1
+
+ШАГ 6: Создайте JSON конфигурацию эффекта
+
+Создайте файл post_effect/имя_эффекта.json:
+- Определите targets (обычно "swap")
+- Определите passes (обычно 2 pass: обработка и вывод)
+- Укажите vertex_shader (обычно "minecraft:post/blit")
+- Укажите fragment_shader (ваш шейдер)
+- Определите inputs (обычно "minecraft:main")
+- Определите output (обычно "swap" для первого pass, "minecraft:main" для второго)
+- Определите uniforms (все uniform переменные из шейдера)
+
+ШАГ 7: Добавьте тип эффекта в EffectManager
+
+Откройте EffectManager.java и добавьте новый тип в enum EffectType:
+- Добавьте имя эффекта (например, BLUR, BLOOM, DIGITAL и т.д.)
+
+ШАГ 8: Добавьте поля и методы в ShaderManager
+
+Откройте ShaderManager.java и добавьте:
+- Поле для хранения значения эффекта (например, private float blur = 0.0f;)
+- Метод setEffect(float value) для установки значения
+- Метод getEffect() для получения значения
+- Обновление uniform переменной в методе updateUniforms()
+
+ШАГ 9: Обновите ExampleModClient
+
+Откройте ExampleModClient.java и добавьте:
+- Обработку нового эффекта в пакете EFFECT_SYNC_ID
+- Вызов shaderManager.setEffect(value) для соответствующего типа эффекта
+
+ШАГ 10: Интегрируйте эффект с предметом
+
+Откройте файл предмета (например, CigaretteItem.java) и добавьте:
+- Вызов EffectManager.addEffect() с новым типом эффекта
+- Вызов EffectManager.syncToClient() для синхронизации с клиентом
+
+
+================================================================================
+5. ПРИМЕР: КОПИРОВАНИЕ ЭФФЕКТА РАЗМЫТИЯ (BLUR)
+================================================================================
+
+ИСХОДНЫЕ ФАЙЛЫ В Psychedelicraft-Legacy-1.7.10:
+
+1. shaderBlur.frag - содержит код шейдера размытия
+2. WrapperBlur.java - обертка для эффекта размытия
+3. ShaderBlur.java - класс шейдера размытия
+
+ШАГИ КОПИРОВАНИЯ:
+
+1. Откройте shaderBlur.frag и изучите uniform переменные:
+   - uniform float hBlur - горизонтальное размытие
+   - uniform float vBlur - вертикальное размытие
+   - uniform vec2 pixelSize - размер пикселя
+   - uniform int repeats - количество повторений
+
+2. Создайте файл smokemod/shaders/post/blur.fsh:
+   - Скопируйте содержимое shaderBlur.frag
+   - Измените версию GLSL на 150
+   - Адаптируйте входные/выходные данные для Minecraft 1.20.1
+
+3. Создайте файл smokemod/post_effect/blur.json:
+   - Определите passes для размытия
+   - Укажите uniform переменные: hBlur, vBlur, pixelSize, repeats
+
+4. Добавьте BLUR в EffectManager.EffectType enum
+
+5. Добавьте в ShaderManager:
+   - Поле private float hBlur = 0.0f;
+   - Поле private float vBlur = 0.0f;
+   - Метод setBlur(float h, float v)
+   - Обновление uniform переменных в updateUniforms()
+
+6. Обновите ExampleModClient для обработки BLUR эффекта
+
+7. Интегрируйте с предметом:
+   - EffectManager.addEffect(player, EffectType.BLUR, 0.05f);
+
+
+================================================================================
+6. ПРИМЕР: КОПИРОВАНИЕ ЭФФЕКТА ЦВЕТОВОГО ВРАЩЕНИЯ (COLOR ROTATION)
+================================================================================
+
+ИСХОДНЫЕ ФАЙЛЫ В Psychedelicraft-Legacy-1.7.10:
+
+1. shaderSimpleEffects.frag - содержит код для вращения цвета
+2. shaderUtils.frag - содержит функцию getRotatedColor()
+
+ШАГИ КОПИРОВАНИЯ:
+
+1. Откройте shaderUtils.frag и найдите функцию getRotatedColor()
+   - Скопируйте эту функцию в smokemod/shaders/include/get_rotated_color.glsl
+
+2. Откройте shaderSimpleEffects.frag и изучите uniform переменные:
+   - uniform float slowColorRotation - медленное вращение цвета
+   - uniform float quickColorRotation - быстрое вращение цвета
+   - uniform float ticks - время для анимации
+
+3. Создайте файл smokemod/shaders/post/color_rotation.fsh:
+   - Скопируйте код вращения цвета из shaderSimpleEffects.frag
+   - Добавьте #moj_import <smokemod:get_rotated_color.glsl>
+   - Измените версию GLSL на 150
+
+4. Создайте файл smokemod/post_effect/color_rotation.json:
+   - Определите passes для вращения цвета
+   - Укажите uniform переменные: slowColorRotation, quickColorRotation, ticks
+
+5. Добавьте SLOW_COLOR_ROTATION и QUICK_COLOR_ROTATION в EffectManager.EffectType enum
+
+6. Добавьте в ShaderManager:
+   - Поля для slowColorRotation и quickColorRotation
+   - Методы для установки значений
+   - Обновление uniform переменных
+
+7. Обновите ExampleModClient для обработки новых эффектов
+
+8. Интегрируйте с предметом
+
+
+================================================================================
+7. ПРИМЕР: КОПИРОВАНИЕ ЦИФРОВОГО ЭФФЕКТА (DIGITAL)
+================================================================================
+
+ИСХОДНЫЕ ФАЙЛЫ В Psychedelicraft-Legacy-1.7.10:
+
+1. shaderDigital.frag - содержит код цифрового эффекта
+2. shaderDigitalDepth.frag - содержит код для глубины
+3. WrapperDigital.java - обертка для цифрового эффекта
+
+ШАГИ КОПИРОВАНИЯ:
+
+1. Откройте shaderDigital.frag и изучите uniform переменные:
+   - uniform float newResolutionX - новая ширина разрешения
+   - uniform float newResolutionY - новая высота разрешения
+   - uniform float textProgress - прогресс текста
+   - uniform float maxColors - максимальное количество цветов
+   - uniform float saturation - насыщенность
+   - uniform vec2 depthRange - диапазон глубины
+
+2. Создайте файл smokemod/shaders/post/digital.fsh:
+   - Скопируйте содержимое shaderDigital.frag
+   - Измените версию GLSL на 150
+   - Адаптируйте для Minecraft 1.20.1
+
+3. Создайте файл smokemod/post_effect/digital.json:
+   - Определите passes для цифрового эффекта
+   - Укажите все uniform переменные
+
+4. Добавьте DIGITAL в EffectManager.EffectType enum
+
+5. Добавьте в ShaderManager:
+   - Поля для всех параметров цифрового эффекта
+   - Методы для установки значений
+   - Обновление uniform переменных
+
+6. Обновите ExampleModClient для обработки DIGITAL эффекта
+
+7. Интегрируйте с предметом (например, для джоинта)
+
+
+================================================================================
+8. ТАБЛИЦА СООТВЕТСТВИЯ ФАЙЛОВ И КЛАССОВ
+================================================================================
+
+Psychedelicraft-Legacy-1.7.10                    | SmokeMod 1.20.1
+------------------------------------------------|----------------------------------
+Drug.java                                         | EffectManager.EffectType (enum)
+DrugProperties.java                               | EffectManager (класс)
+DrugHallucinationManager.java                     | EffectManager (методы)
+DrugRenderer.java                                 | ExampleModClient (инициализация)
+EffectWrapper.java                                | - (не нужен, используется Fabric API)
+ShaderWrapper.java                                | ShaderManager (адаптирован)
+WrapperSimpleEffects.java                         | ShaderManager (интегрирован)
+ShaderSimpleEffects.java                          | ShaderManager (интегрирован)
+shaderUtils.frag                                  | shaders/include/*.glsl
+shaderSimpleEffects.frag                          | shaders/post/desaturation.fsh
+shaderBlur.frag                                   | shaders/post/blur.fsh
+shaderBloom.frag                                  | shaders/post/bloom.fsh
+shaderDigital.frag                                | shaders/post/digital.frag
+shaderBasic.vert                                  | minecraft:post/blit (встроенный)
+-                                                 | post_effect/desaturation.json
+-                                                 | post_effect/blur.json
+-                                                 | post_effect/bloom.json
+-                                                 | post_effect/digital.json
+
+
+================================================================================
+9. СОВЕТЫ И РЕКОМЕНДАЦИИ
+================================================================================
+
+1. ВЕРСИЯ GLSL:
+   - Psychedelicraft-Legacy-1.7.10 использует GLSL 120
+   - Minecraft 1.20.1 требует GLSL 150
+   - Всегда изменяйте #version 120 на #version 150
+
+2. ВХОДНЫЕ И ВЫХОДНЫЕ ДАННЫЕ:
+   - В Psychedelicraft-Legacy-1.7.10 используется gl_FragColor
+   - В Minecraft 1.20.1 используется out vec4 fragColor
+   - В Psychedelicraft-Legacy-1.7.10 используется texture2D()
+   - В Minecraft 1.20.1 используется texture()
+
+3. UNIFORM ПЕРЕМЕННЫЕ:
+   - В Psychedelicraft-Legacy-1.7.10 uniform переменные устанавливаются через Java код
+   - В Minecraft 1.20.1 uniform переменные определяются в JSON конфигурации
+   - Имена sampler переменных должны соответствовать JSON конфигурации
+
+4. ВКЛЮЧЕНИЕ ФАЙЛОВ:
+   - В Psychedelicraft-Legacy-1.7.10 файлы включаются через #include
+   - В Minecraft 1.20.1 файлы включаются через #moj_import
+   - Путь к файлу должен быть в формате modid:путь/к/файлу
+
+5. JSON КОНФИГУРАЦИЯ:
+   - Всегда создавайте JSON конфигурацию для каждого эффекта
+   - Используйте два pass: обработка и вывод
+   - Первый pass выводит в "swap", второй - в "minecraft:main"
+
+6. СИНХРОНИЗАЦИЯ:
+   - Эффекты должны синхронизироваться между сервером и клиентом
+   - Используйте сетевые пакеты для передачи значений эффектов
+   - Обновляйте uniform переменные в каждом кадре
+
+7. ТЕСТИРОВАНИЕ:
+   - Тестируйте каждый эффект отдельно
+   - Проверяйте, что эффект плавно убывает
+   - Проверяйте, что эффект не влияет на производительность
+
+8. РАСШИРЕНИЕ:
+   - Система EffectManager спроектирована для легкого добавления новых эффектов
+   - Просто добавьте новый тип в enum и соответствующую обработку
+   - Не нужно изменять существующий код для добавления новых эффектов
+
+9. ПРОИЗВОДИТЕЛЬНОСТЬ:
+   - Ограничивайте количество активных эффектов
+   - Используйте shouldApply() для проверки, нужно ли применять эффект
+   - Оптимизируйте GLSL код для лучшей производительности
+
+10. ОТЛАДКА:
+    - Используйте логирование для отслеживания значений эффектов
+    - Проверяйте, что шейдеры загружаются корректно
+    - Используйте отладчик для проверки значений uniform переменных
+
+
+================================================================================
+ДОПОЛНИТЕЛЬНЫЕ РЕСУРСЫ
+================================================================================
+
+- Документация Fabric API: https://fabricmc.net/wiki/
+- Документация Minecraft шейдеров: https://github.com/MinecraftForge/Documentation/blob/1.20.x/docs/shaders/shaders.md
+- GLSL справочник: https://www.khronos.org/opengl/wiki/OpenGL_Shading_Language
+- Psychedelicraft исходный код: https://github.com/Ivorforce/Psychedelicraft
+
+
+================================================================================
+КОНЕЦ ИНСТРУКЦИИ
+================================================================================

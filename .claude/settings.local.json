@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mv smokemod_main/src/main/resources/assets/smokemod/post_effect/desaturation.json smokemod_main/src/main/resources/assets/smokemod/shaders/post/desaturation.json)",
+      "Bash(rm smokemod_main/src/main/resources/assets/smokemod/shaders/program/desaturation.json)",
+      "Bash(xargs grep -l -i -E \"desatur|shader|PostProcess|getDesaturat\")",
+      "Bash(xargs grep -l -i -E \"shader|getDesaturat|colorMultiplier|saturat\")",
+      "Read(//tmp/**)",
+      "Bash(unzip -l \"C:/Users/MrUser/.gradle/caches/fabric-loom/1.20.1/minecraft-common.jar\")",
+      "Read(//c/Users/MrUser/.gradle/caches/**)",
+      "Read(//c/Users/MrUser/.gradle/**)",
+      "Bash(python -c ' *)"
+    ]
+  }
+}

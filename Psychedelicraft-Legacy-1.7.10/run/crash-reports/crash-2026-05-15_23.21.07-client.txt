@@ -1,0 +1,126 @@
+---- Minecraft Crash Report ----
+// You're mean.
+
+Time: 15.05.26 23:21
+Description: Initializing game
+
+java.lang.VerifyError: Expecting a stackmap frame at branch target 8
+Exception Details:
+  Location:
+    net/minecraft/client/renderer/EntityRenderer.setupCameraTransform(FI)V @4: ifeq
+  Reason:
+    Expected stackmap frame at this location.
+  Bytecode:
+    0x0000000: 23b8 0306 9900 04b1 2a2a b400 b8b4 015c
+    0x0000010: b401 9c10 1068 86b5 0308 1117 01b8 030c
+    0x0000020: b803 0f13 0310 462a b400 b8b4 015c b403
+    0x0000030: 1399 0011 1c05 6804 6474 8625 6a0b 0bb8
+    0x0000040: 02b0 2ab4 00a1 0f97 9900 1e2a b403 1590
+    0x0000050: 2ab4 0317 7790 0bb8 02b0 2ab4 00a1 2ab4
+    0x0000060: 00a1 0fb8 031b 2a23 04b7 031d 2ab4 00b8
+    0x0000070: b401 1f86 2ab4 00b8 b401 2286 6e13 016a
+    0x0000080: 2ab4 0308 0d6a b803 222a b400 b8b4 01c0
+    0x0000090: b603 2599 000f 1303 2638 040c 1704 0cb8
+    0x00000a0: 0329 1117 00b8 030c b803 0f2a b400 b8b4
+    0x00000b0: 015c b403 1399 0012 1c05 6804 6486 1301
+    0x00000c0: 9e6a 0b0b b802 b02a 23b7 032b 2ab4 00b8
+    0x00000d0: b401 5cb4 032e 9900 082a 23b7 0330 2ab4
+    0x00000e0: 00b8 b401 7eb4 0333 2ab4 00b8 b401 7eb4
+    0x00000f0: 0336 2ab4 00b8 b401 7eb4 0333 6623 6a62
+    0x0000100: 3804 1704 0b95 9e00 6410 1436 052a b400
+    0x0000110: b8b4 017e b203 3cb6 0340 9900 0710 0736
+    0x0000120: 0513 02b2 1704 1704 6a13 02b2 626e 1704
+    0x0000130: 1303 416a 6638 0617 0617 066a 3806 2ab4
+    0x0000140: 01a0 8623 6215 0586 6a0b 0c0c b802 830c
+    0x0000150: 1706 6e0c 0cb8 0329 2ab4 01a0 8623 6276
+    0x0000160: 1505 866a 0b0c 0cb8 0283 2a23 b703 422a
+    0x0000170: b402 529e 0056 2ab4 0252 0464 3605 1505
+    0x0000180: 04a0 000c 1302 530b 0c0b b802 8315 0505
+    0x0000190: a000 0c13 02dc 0b0c 0bb8 0283 1505 06a0
+    0x00001a0: 000c 1303 430b 0c0b b802 8315 0507 a000
+    0x00001b0: 0c13 0253 0c0b 0bb8 0283 1505 08a0 000c
+    0x00001c0: 1303 430c 0b0b b802 83b1               
+  Stackmap Table:
+    append_frame(@66,Float)
+    same_frame(@102)
+    same_frame(@162)
+    same_frame(@199)
+    same_frame(@222)
+    append_frame(@289,Float,Integer)
+    chop_frame(@362,1)
+    append_frame(@397,Integer)
+    same_frame(@412)
+    same_frame(@427)
+    same_frame(@442)
+    chop_frame(@457,1)
+
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:547)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:942)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:40)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at net.minecraft.client.Minecraft.startGame(Minecraft.java:547)
+
+-- Initialization --
+Details:
+Stacktrace:
+	at net.minecraft.client.Minecraft.run(Minecraft.java:942)
+	at net.minecraft.client.main.Main.main(Main.java:164)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:40)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.7.10
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_492, Azul Systems, Inc.
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode), Azul Systems, Inc.
+	Memory: 795652112 bytes (758 MB) / 1777860608 bytes (1695 MB) up to 5726797824 bytes (5461 MB)
+	JVM Flags: 2 total; -Xms1G -Xmx6G
+	AABB Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP v9.05 FML v7.10.99.99 Minecraft Forge 10.13.4.1614 8 mods loaded, 8 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCH	mcp{9.05} [Minecraft Coder Pack] (minecraft.jar) 
+	UCH	FML{7.10.99.99} [Forge Mod Loader] (recompiled_minecraft-1.7.10.jar) 
+	UCH	Forge{10.13.4.1614} [Minecraft Forge] (recompiled_minecraft-1.7.10.jar) 
+	UCH	NotEnoughItems{2.7.4-GTNH} [NotEnoughItems] (NotEnoughItems-2.7.4-GTNH-dev.jar) 
+	UCH	CodeChickenCore{1.4.0} [CodeChicken Core] (minecraft.jar) 
+	UCH	psychedelicraftcore{1.4} [Psychedelicraft Core] (minecraft.jar) 
+	UCH	psychedelicraft{1.5.2} [Psychedelicraft-Legacy-1.7.10] (Psychedelicraft-1.5.4-dev.jar) 
+	UCH	ivtoolkit{1.2.1} [IvToolkit] (IvToolkit-V1.2.2.jar) 
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.6.0 NVIDIA 591.86' Renderer: 'NVIDIA GeForce RTX 3060 Laptop GPU/PCIe/SSE2'
+	Launched Version: 1.7.10
+	LWJGL: 2.9.4
+	OpenGL: NVIDIA GeForce RTX 3060 Laptop GPU/PCIe/SSE2 GL version 4.6.0 NVIDIA 591.86, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Anisotropic filtering is supported and maximum anisotropy is 16.
+Shaders are available because OpenGL 2.1 is supported.
+
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: []
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	Vec3 Pool Size: 0 (0 bytes; 0 MB) allocated, 0 (0 bytes; 0 MB) used
+	Anisotropic Filtering: Off (1)

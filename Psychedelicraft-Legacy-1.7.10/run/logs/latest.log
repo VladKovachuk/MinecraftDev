@@ -1,0 +1,48 @@
+[23:25:00] [main/INFO]: Setting user: Developer
+[23:25:02] [Client thread/INFO]: LWJGL Version: 2.9.4
+[23:25:06] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:NotEnoughItems, FMLFileResourcePack:Psychedelicraft-Legacy-1.7.10, FMLFileResourcePack:IvToolkit
+[23:25:07] [Client thread/INFO]: Created: 16x16 textures/blocks-atlas
+[23:25:07] [Client thread/INFO]: Created: 16x16 textures/items-atlas
+[23:25:08] [Sound Library Loader/INFO]: Sound engine started
+[23:25:08] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:NotEnoughItems, FMLFileResourcePack:Psychedelicraft-Legacy-1.7.10, FMLFileResourcePack:IvToolkit
+[23:25:09] [Client thread/INFO]: Created: 512x256 textures/blocks-atlas
+[23:25:09] [Client thread/INFO]: Created: 512x256 textures/items-atlas
+[23:25:10] [Sound Library Loader/INFO]: Sound engine started
+[23:25:40] [Server thread/INFO]: Starting integrated minecraft server version 1.7.10
+[23:25:40] [Server thread/INFO]: Generating keypair
+[23:25:40] [Server thread/INFO]: Converting map!
+[23:25:40] [Server thread/INFO]: Scanning folders...
+[23:25:40] [Server thread/INFO]: Total conversion count is 0
+[23:25:40] [Server thread/INFO]: Preparing start region for level 0
+[23:25:41] [Server thread/INFO]: Preparing spawn area: 31%
+[23:25:42] [Server thread/INFO]: Preparing spawn area: 71%
+[23:25:43] [Server thread/INFO]: Changing view distance to 12, from 10
+[23:25:43] [Server thread/INFO]: Developer[local:E:1e19b7a4] logged in with entity id 212 at (201.5, 73.0, -91.5)
+[23:25:43] [Server thread/INFO]: Developer joined the game
+[23:25:51] [Server thread/INFO]: Developer has just earned the achievement [Taking Inventory]
+[23:25:51] [Client thread/INFO]: [CHAT] Developer has just earned the achievement [Taking Inventory]
+[23:26:38] [Server thread/INFO]: Saving and pausing game...
+[23:26:38] [Server thread/INFO]: Saving chunks for level 'Psyshodelicraft test'/Overworld
+[23:26:38] [Server thread/INFO]: Saving chunks for level 'Psyshodelicraft test'/Nether
+[23:26:38] [Server thread/INFO]: Saving chunks for level 'Psyshodelicraft test'/The End
+[23:27:27] [Server thread/INFO]: Developer fell out of the world
+[23:27:27] [Client thread/INFO]: [CHAT] Developer fell out of the world
+[23:27:27] [Client thread/INFO]: [CHAT] Ouch! That looked like it hurt
+[23:27:45] [Server thread/INFO]: Saving and pausing game...
+[23:27:45] [Server thread/INFO]: Saving chunks for level 'Psyshodelicraft test'/Overworld
+[23:27:45] [Server thread/INFO]: Saving chunks for level 'Psyshodelicraft test'/Nether
+[23:27:45] [Server thread/INFO]: Saving chunks for level 'Psyshodelicraft test'/The End
+[23:27:51] [Server thread/INFO]: Developer fell out of the world
+[23:27:51] [Client thread/INFO]: [CHAT] Developer fell out of the world
+[23:27:51] [Client thread/INFO]: [CHAT] Ouch! That looked like it hurt
+[23:28:23] [Server thread/INFO]: Saving and pausing game...
+[23:28:23] [Server thread/INFO]: Saving chunks for level 'Psyshodelicraft test'/Overworld
+[23:28:23] [Server thread/INFO]: Saving chunks for level 'Psyshodelicraft test'/Nether
+[23:28:23] [Server thread/INFO]: Saving chunks for level 'Psyshodelicraft test'/The End
+[23:28:24] [Server thread/INFO]: Stopping server
+[23:28:24] [Server thread/INFO]: Saving players
+[23:28:24] [Server thread/INFO]: Saving worlds
+[23:28:24] [Server thread/INFO]: Saving chunks for level 'Psyshodelicraft test'/Overworld
+[23:28:24] [Server thread/INFO]: Saving chunks for level 'Psyshodelicraft test'/Nether
+[23:28:24] [Server thread/INFO]: Saving chunks for level 'Psyshodelicraft test'/The End
+[23:28:25] [Client thread/INFO]: Stopping!

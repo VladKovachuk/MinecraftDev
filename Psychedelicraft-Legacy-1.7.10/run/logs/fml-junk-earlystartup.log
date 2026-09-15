@@ -1,0 +1,50 @@
+[21:13:55] [main/INFO] [GradleStart]: userProperties: {}
+[21:13:55] [main/INFO] [GradleStart]: assetsDir: /home/coffeemeow/.gradle/caches/retro_futura_gradle/assets
+[21:13:55] [main/INFO] [GradleStart]: assetIndex: 1.7.10
+[21:13:55] [main/INFO] [GradleStart]: accessToken: 0
+[21:13:55] [main/INFO] [GradleStart]: version: 1.7.10
+[21:13:55] [main/INFO] [GradleStart]: username: Developer
+[21:13:55] [main/INFO] [GradleStart]: Extra: [--gameDir, /home/coffeemeow/Repo/Psychedelicraft/run, --uuid, 31c4910d-9b69-4725-8969-9ed53ac8a7dc]
+[21:13:55] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[21:13:55] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[21:13:55] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /home/coffeemeow/.gradle/caches/retro_futura_gradle/assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7.10, --username, Developer, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --gameDir, /home/coffeemeow/Repo/Psychedelicraft/run, --uuid, 31c4910d-9b69-4725-8969-9ed53ac8a7dc, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[21:52:43] [main/INFO] [GradleStart]: userProperties: {}
+[21:52:43] [main/INFO] [GradleStart]: assetsDir: /home/coffeemeow/.gradle/caches/retro_futura_gradle/assets
+[21:52:43] [main/INFO] [GradleStart]: assetIndex: 1.7.10
+[21:52:43] [main/INFO] [GradleStart]: accessToken: 0
+[21:52:43] [main/INFO] [GradleStart]: version: 1.7.10
+[21:52:43] [main/INFO] [GradleStart]: username: Developer
+[21:52:43] [main/INFO] [GradleStart]: Extra: [--gameDir, /home/coffeemeow/Repo/Psychedelicraft/run, --uuid, 31c4910d-9b69-4725-8969-9ed53ac8a7dc]
+[21:52:43] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[21:52:43] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[21:52:43] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, /home/coffeemeow/.gradle/caches/retro_futura_gradle/assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7.10, --username, Developer, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --gameDir, /home/coffeemeow/Repo/Psychedelicraft/run, --uuid, 31c4910d-9b69-4725-8969-9ed53ac8a7dc, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[23:20:54] [main/INFO] [GradleStart]: userProperties: {}
+[23:20:54] [main/INFO] [GradleStart]: assetsDir: C:\Users\MrUser\.gradle\caches\retro_futura_gradle\assets
+[23:20:54] [main/INFO] [GradleStart]: assetIndex: 1.7.10
+[23:20:54] [main/INFO] [GradleStart]: accessToken: 0
+[23:20:54] [main/INFO] [GradleStart]: version: 1.7.10
+[23:20:54] [main/INFO] [GradleStart]: username: Developer
+[23:20:54] [main/INFO] [GradleStart]: Extra: [--gameDir, C:\Users\MrUser\Desktop\MinecraftDev\Psychedelicraft-Legacy-1.7.10\run, --uuid, 31c4910d-9b69-4725-8969-9ed53ac8a7dc]
+[23:20:54] [main/INFO] [GradleStart]: Found and added coremod: ivorius.psychedelicraftcore.PsychedelicraftLoadingPlugin
+[23:20:54] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[23:20:54] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[23:20:54] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:\Users\MrUser\.gradle\caches\retro_futura_gradle\assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7.10, --username, Developer, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --gameDir, C:\Users\MrUser\Desktop\MinecraftDev\Psychedelicraft-Legacy-1.7.10\run, --uuid, 31c4910d-9b69-4725-8969-9ed53ac8a7dc, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[23:20:54] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[23:20:54] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[23:20:54] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[23:20:54] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
+[23:24:59] [main/INFO] [GradleStart]: userProperties: {}
+[23:24:59] [main/INFO] [GradleStart]: assetsDir: C:\Users\MrUser\.gradle\caches\retro_futura_gradle\assets
+[23:24:59] [main/INFO] [GradleStart]: assetIndex: 1.7.10
+[23:24:59] [main/INFO] [GradleStart]: accessToken: 0
+[23:24:59] [main/INFO] [GradleStart]: version: 1.7.10
+[23:24:59] [main/INFO] [GradleStart]: username: Developer
+[23:24:59] [main/INFO] [GradleStart]: Extra: [--gameDir, C:\Users\MrUser\Desktop\MinecraftDev\Psychedelicraft-Legacy-1.7.10\run, --uuid, 31c4910d-9b69-4725-8969-9ed53ac8a7dc]
+[23:24:59] [main/INFO] [GradleStart]: Found and added coremod: ivorius.psychedelicraftcore.PsychedelicraftLoadingPlugin
+[23:24:59] [main/INFO] [GradleStart]: Found and added coremod: codechicken.nei.asm.NEICorePlugin
+[23:24:59] [main/INFO] [GradleStart]: Found and added coremod: codechicken.core.launch.CodeChickenCorePlugin
+[23:24:59] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:\Users\MrUser\.gradle\caches\retro_futura_gradle\assets, --assetIndex, 1.7.10, --accessToken, {REDACTED}, --version, 1.7.10, --username, Developer, --tweakClass, cpw.mods.fml.common.launcher.FMLTweaker, --gameDir, C:\Users\MrUser\Desktop\MinecraftDev\Psychedelicraft-Legacy-1.7.10\run, --uuid, 31c4910d-9b69-4725-8969-9ed53ac8a7dc, --tweakClass, net.minecraftforge.gradle.tweakers.CoremodTweaker]
+[23:24:59] [main/INFO] [LaunchWrapper]: Loading tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[23:24:59] [main/INFO] [LaunchWrapper]: Using primary tweak class name cpw.mods.fml.common.launcher.FMLTweaker
+[23:24:59] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.gradle.tweakers.CoremodTweaker
+[23:24:59] [main/INFO] [LaunchWrapper]: Calling tweak class cpw.mods.fml.common.launcher.FMLTweaker
