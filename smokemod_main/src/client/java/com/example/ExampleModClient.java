@@ -220,11 +220,9 @@ public class ExampleModClient implements ClientModInitializer {
 					});
 				});
 
-		// GameRendererMixin updates once per frame; Joint is rendered before HUD, desaturation after it.
+		
 	}
 }
 
-// Конец клиентской инициализации мода.
-// Комментарий добавлен в конец файла.
 
 
