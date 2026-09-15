@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:block/cross",
+    "textures": {
+        "cross": "smokemod:block/tobacco_crop_stage3_top"
+    }
+}

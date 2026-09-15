@@ -1,0 +1,6 @@
+{
+  "textures": {
+    "cross": "smokemod:block/cannabis_crop_mid0"
+  },
+  "parent": "minecraft:block/cross"
+}

@@ -1,0 +1,6 @@
+{
+  "textures": {
+    "layer0": "smokemod:item/cannabis_bud"
+  },
+  "parent": "minecraft:item/generated"
+}

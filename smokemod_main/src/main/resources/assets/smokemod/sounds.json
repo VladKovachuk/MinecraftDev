@@ -1,0 +1,10 @@
+{
+  "sound_cigarette": {
+    "sounds": ["smokemod:sound_cigarette"],
+    "subtitle": "subtitle.smokemod.cigarette"
+  },
+  "exhalation50": {
+    "sounds": ["smokemod:exhalation50"],
+    "subtitle": "subtitle.smokemod.exhalation"
+  }
+}

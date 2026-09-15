@@ -1,0 +1,31 @@
+{
+  "variants": {
+    "age=0,part=0": { "model": "smokemod:block/seedling" },
+    "age=0,part=1": { "model": "smokemod:block/cannabis_crop_mid0" },
+    "age=0,part=2": { "model": "smokemod:block/cannabis_crop_top" },
+
+    "age=1,part=0": { "model": "smokemod:block/cannabis_crop_stage0" },
+    "age=1,part=1": { "model": "smokemod:block/cannabis_crop_mid0" },
+    "age=1,part=2": { "model": "smokemod:block/cannabis_crop_top" },
+
+    "age=2,part=0": { "model": "smokemod:block/cannabis_crop_stage1" },
+    "age=2,part=1": { "model": "smokemod:block/cannabis_crop_mid0" },
+    "age=2,part=2": { "model": "smokemod:block/cannabis_crop_top" },
+
+    "age=3,part=0": { "model": "smokemod:block/cannabis_crop_stage2" },
+    "age=3,part=1": { "model": "smokemod:block/cannabis_crop_mid0" },
+    "age=3,part=2": { "model": "smokemod:block/cannabis_crop_top" },
+
+    "age=4,part=0": { "model": "smokemod:block/cannabis_crop_stage2" },
+    "age=4,part=1": { "model": "smokemod:block/cannabis_crop_mid0" },
+    "age=4,part=2": { "model": "smokemod:block/cannabis_crop_top" },
+
+    "age=5,part=0": { "model": "smokemod:block/cannabis_crop_stage3" },
+    "age=5,part=1": { "model": "smokemod:block/cannabis_crop_mid1" },
+    "age=5,part=2": { "model": "smokemod:block/cannabis_crop_top" },
+
+    "age=6,part=0": { "model": "smokemod:block/cannabis_crop_stage4" },
+    "age=6,part=1": { "model": "smokemod:block/cannabis_crop_mid2" },
+    "age=6,part=2": { "model": "smokemod:block/cannabis_crop_top" }
+  }
+}

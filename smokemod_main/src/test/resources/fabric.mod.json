@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "smokemod_test",
+  "version": "1.0.0",
+  "name": "Smoke Mod regression tests",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-gametest": [
+      "com.example.block.entity.DryingTableRegressionTest",
+      "com.example.block.entity.JarRegressionTest",
+      "com.example.effects.SmokingEffectGameTest"
+    ]
+  }
+}

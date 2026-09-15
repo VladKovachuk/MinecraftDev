@@ -1,0 +1,21 @@
+{
+    "multipart": [
+        { "apply": { "model": "smokemod:block/drying_table_net" } },
+        {
+            "when": { "north": "false" },
+            "apply": { "model": "smokemod:block/drying_table_balk" }
+        },
+        {
+            "when": { "east": "false" },
+            "apply": { "model": "smokemod:block/drying_table_balk", "y": 90 }
+        },
+        {
+            "when": { "south": "false" },
+            "apply": { "model": "smokemod:block/drying_table_balk", "y": 180 }
+        },
+        {
+            "when": { "west": "false" },
+            "apply": { "model": "smokemod:block/drying_table_balk", "y": 270 }
+        }
+    ]
+}

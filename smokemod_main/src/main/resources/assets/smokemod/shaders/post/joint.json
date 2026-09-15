@@ -1,0 +1,18 @@
+{
+  "targets": ["joint_scene", "joint_composite", "joint_history"],
+  "passes": [
+    {
+      "name": "smokemod_joint",
+      "intarget": "minecraft:main",
+      "outtarget": "joint_scene"
+    },
+    {
+      "name": "smokemod_joint_motion",
+      "intarget": "joint_scene",
+      "outtarget": "joint_composite",
+      "auxtargets": [{ "name": "HistorySampler", "id": "joint_history" }]
+    },
+    { "name": "blit", "intarget": "joint_composite", "outtarget": "joint_history" },
+    { "name": "blit", "intarget": "joint_composite", "outtarget": "minecraft:main" }
+  ]
+}

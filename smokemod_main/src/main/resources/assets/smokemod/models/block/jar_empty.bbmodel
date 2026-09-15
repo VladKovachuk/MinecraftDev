@@ -1,0 +1,460 @@
+{
+  "meta": {
+    "format_version": "5.0",
+    "model_format": "java_block",
+    "box_uv": false
+  },
+  "name": "jar_empty",
+  "parent": "",
+  "java_block_version": "1.21.11",
+  "ambientocclusion": false,
+  "front_gui_light": false,
+  "visible_box": [
+    1,
+    1,
+    0
+  ],
+  "variable_placeholders": "",
+  "multi_file_ruleset": "",
+  "variable_placeholder_buttons": [],
+  "unhandled_root_fields": {
+    "format_version": "1.21.11"
+  },
+  "resolution": {
+    "width": 16,
+    "height": 16
+  },
+  "elements": [
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "export": true,
+      "scope": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        5.47,
+        0,
+        5.47
+      ],
+      "to": [
+        10.53,
+        6.325,
+        10.53
+      ],
+      "autouv": 0,
+      "color": 7,
+      "origin": [
+        -0.8,
+        0,
+        -0.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            0,
+            0,
+            8,
+            8
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            8,
+            8,
+            16
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            8,
+            8,
+            16
+          ],
+          "texture": 0,
+          "cullface": "down"
+        }
+      },
+      "type": "cube",
+      "uuid": "c3b8a11b-e3d3-c798-c0a0-2c26673180a0"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "export": true,
+      "scope": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        6.41875,
+        6.325,
+        6.41875
+      ],
+      "to": [
+        9.58125,
+        7.59,
+        9.58125
+      ],
+      "autouv": 0,
+      "color": 6,
+      "origin": [
+        -0.8,
+        0,
+        -0.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8,
+            0,
+            12,
+            4
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            8,
+            0,
+            12,
+            4
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            8,
+            0,
+            12,
+            4
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            8,
+            0,
+            12,
+            4
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        }
+      },
+      "type": "cube",
+      "uuid": "0a2dcd4f-1bba-cf6a-496d-2367bf25030c"
+    },
+    {
+      "name": "cube",
+      "box_uv": false,
+      "render_order": "default",
+      "rescale": false,
+      "locked": false,
+      "shade": true,
+      "light_emission": 0,
+      "export": true,
+      "scope": 0,
+      "allow_mirror_modeling": true,
+      "from": [
+        6.1025,
+        7.59,
+        6.1025
+      ],
+      "to": [
+        9.8975,
+        8.2225,
+        9.8975
+      ],
+      "autouv": 0,
+      "color": 2,
+      "origin": [
+        -0.8,
+        0,
+        -0.8
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            8,
+            4,
+            12,
+            5
+          ],
+          "texture": 0
+        },
+        "east": {
+          "uv": [
+            8,
+            4,
+            12,
+            5
+          ],
+          "texture": 0
+        },
+        "south": {
+          "uv": [
+            8,
+            4,
+            12,
+            5
+          ],
+          "texture": 0
+        },
+        "west": {
+          "uv": [
+            8,
+            4,
+            12,
+            5
+          ],
+          "texture": 0
+        },
+        "up": {
+          "uv": [
+            12,
+            0,
+            16,
+            4
+          ],
+          "texture": 0
+        },
+        "down": {
+          "uv": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "texture": null
+        }
+      },
+      "type": "cube",
+      "uuid": "56a5067c-b394-a7cd-e456-8d4a6e24e563"
+    }
+  ],
+  "groups": [],
+  "outliner": [
+    "c3b8a11b-e3d3-c798-c0a0-2c26673180a0",
+    "0a2dcd4f-1bba-cf6a-496d-2367bf25030c",
+    "56a5067c-b394-a7cd-e456-8d4a6e24e563"
+  ],
+  "textures": [
+    {
+      "name": "jar_empty.png",
+      "path": "C:\\Users\\MrUser\\Desktop\\MinecraftDev\\smokemod_main\\src\\main\\resources\\assets\\smokemod\\textures\\block\\jar_empty.png",
+      "folder": "block",
+      "namespace": "smokemod",
+      "id": "0",
+      "group": "",
+      "scope": 0,
+      "width": 16,
+      "height": 16,
+      "uv_width": 16,
+      "uv_height": 16,
+      "particle": true,
+      "use_as_default": false,
+      "layers_enabled": false,
+      "sync_to_project": "",
+      "file_format": "png",
+      "render_mode": "default",
+      "render_sides": "auto",
+      "wrap_mode": "limited",
+      "pbr_channel": "color",
+      "fps": 7,
+      "frame_time": 1,
+      "frame_order_type": "loop",
+      "frame_order": "",
+      "frame_interpolate": false,
+      "visible": true,
+      "internal": true,
+      "saved": true,
+      "uuid": "5b634a65-0760-d8b8-6db0-25c43c65ceff",
+      "source": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABfklEQVR4AYySy0sCURTG79xVD0s0TCiiNkJBumhTENSmEKFNi+hvaGX0MHKTqx4whUIQFC0SbGPUsiI35iLdFFlUBPYgitTQkgwbgmm+EYdBBr3D/Dhnzj3fdw6Xoce354uVCN1FfWr8bru4vzQqIm5MDopU+PsV7F09bi3uE4+JTDaTGurscwLkqfQXSSYzJP9TIPV1NYQS6XnKxk+kwPQ2m/TEbDbKYl1DXdGgkrIg0II/fDQNkGMyNihtIm/QYbANx19jc1pGN+su/t2/wD9szvOX3ll+whvmwMxWVI6yAYS21t4VxHKWg3HOtR3jPIELbvXgiis/VwzKD1i/ae473x04C+1pYWzSO6oZUaOu9roSVQ3Q4LD2e7RIfeZwrMDvjohO34CoFKSE+Q4gfknnyNtzlqhNmAzGpqwixNJA0tJuIG2mRsWEyQAiiCHEBiUz1JgMfM5TriQct1igI6ghYTJAY3Ct+BNFhA9FjDrFTe9EDj1aoEENpgJ17R8AAP//RtJW0AAAAAZJREFUAwD7N+z58Iv/hQAAAABJRU5ErkJggg==",
+      "relative_path": "../../textures/block/jar_empty.png"
+    }
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [
+        44,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        3.5,
+        3.5
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [
+        44,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        3.5,
+        3.5
+      ],
+      "scale": [
+        0.8,
+        0.8,
+        0.8
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        45,
+        0
+      ],
+      "translation": [
+        1.5,
+        6.25,
+        0
+      ],
+      "scale": [
+        0.95,
+        0.95,
+        0.95
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        45,
+        0
+      ],
+      "translation": [
+        1.5,
+        6.5,
+        0
+      ],
+      "scale": [
+        0.95,
+        0.95,
+        0.95
+      ]
+    },
+    "ground": {
+      "translation": [
+        0,
+        2,
+        0
+      ],
+      "scale": [
+        0.6,
+        0.6,
+        0.6
+      ]
+    },
+    "gui": {
+      "rotation": [
+        15,
+        -152,
+        0
+      ],
+      "translation": [
+        0,
+        6.55,
+        0
+      ],
+      "scale": [
+        1.55,
+        1.55,
+        1.55
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        -180,
+        0
+      ],
+      "translation": [
+        0,
+        9,
+        0
+      ],
+      "scale": [
+        2,
+        2,
+        2
+      ]
+    },
+    "on_shelf": {
+      "translation": [
+        0,
+        1.25,
+        0
+      ],
+      "scale": [
+        2,
+        2,
+        2
+      ]
+    }
+  }
+}

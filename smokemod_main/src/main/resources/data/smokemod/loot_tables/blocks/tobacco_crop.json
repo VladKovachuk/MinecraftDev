@@ -1,0 +1,47 @@
+{
+    "type": "minecraft:block",
+    "pools": [
+        {
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "minecraft:block_state_property",
+                    "block": "smokemod:tobacco_crop",
+                    "properties": { "half": "lower" }
+                }
+            ],
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "smokemod:tobacco_seeds"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "conditions": [
+                {
+                    "condition": "minecraft:block_state_property",
+                    "block": "smokemod:tobacco_crop",
+                    "properties": { "half": "lower", "age": "5" }
+                }
+            ],
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "smokemod:green_tobacco_leaf",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_count",
+                            "count": {
+                                "type": "minecraft:uniform",
+                                "min": 1.0,
+                                "max": 3.0
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

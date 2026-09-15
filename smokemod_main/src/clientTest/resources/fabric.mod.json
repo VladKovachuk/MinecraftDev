@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "smokemod_client_test",
+  "version": "1.0.0",
+  "name": "Smoke Mod client shader tests",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.example.shader.JointShaderSmokeTest"]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "smokemod:dried_cannabis_bud"
+    }
+  ],
+  "result": {
+    "item": "smokemod:joint",
+    "count": 1
+  }
+}

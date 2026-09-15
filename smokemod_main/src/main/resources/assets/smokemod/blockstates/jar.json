@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "filled=false": {
+      "model": "smokemod:block/jar_empty"
+    },
+    "filled=true": {
+      "model": "smokemod:block/jar"
+    }
+  }
+}

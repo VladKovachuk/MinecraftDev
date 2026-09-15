@@ -1,0 +1,328 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"0": "smokemod:block/jar_pixel",
+		"particle": "smokemod:block/jar_pixel",
+		"bud": "smokemod:item/cannabis_bud"
+	},
+	"elements": [
+		{
+			"from": [5.47, 0, 5.47],
+			"to": [10.53, 6.325, 10.53],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-0.8, 0, -0.8]},
+			"faces": {
+				"north": {"uv": [0, 0, 8, 8], "texture": "#0"},
+				"east": {"uv": [0, 0, 8, 8], "texture": "#0"},
+				"south": {"uv": [0, 0, 8, 8], "texture": "#0"},
+				"west": {"uv": [0, 0, 8, 8], "texture": "#0"},
+				"up": {"uv": [0, 8, 8, 16], "texture": "#0"},
+				"down": {"uv": [0, 8, 8, 16], "texture": "#0", "cullface": "down"}
+			}
+		},
+		{
+			"from": [6.41875, 6.325, 6.41875],
+			"to": [9.58125, 7.59, 9.58125],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-0.8, 0, -0.8]},
+			"faces": {
+				"north": {"uv": [8, 0, 12, 4], "texture": "#0"},
+				"east": {"uv": [8, 0, 12, 4], "texture": "#0"},
+				"south": {"uv": [8, 0, 12, 4], "texture": "#0"},
+				"west": {"uv": [8, 0, 12, 4], "texture": "#0"}
+			}
+		},
+		{
+			"from": [6.1025, 7.59, 6.1025],
+			"to": [9.8975, 8.2225, 9.8975],
+			"rotation": {"angle": 0, "axis": "y", "origin": [-0.8, 0, -0.8]},
+			"faces": {
+				"north": {"uv": [8, 4, 12, 5], "texture": "#0"},
+				"east": {"uv": [8, 4, 12, 5], "texture": "#0"},
+				"south": {"uv": [8, 4, 12, 5], "texture": "#0"},
+				"west": {"uv": [8, 4, 12, 5], "texture": "#0"},
+				"up": {"uv": [12, 0, 16, 4], "texture": "#0"}
+			}
+		},
+		{
+			"name": "bud_1_lower",
+			"from": [6.3775, 0.44, 8.4675],
+			"to": [7.4225, 0.935, 9.5125],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [6.9, 1.595, 8.99]},
+			"faces": {
+				"north": {"uv": [7, 9, 11, 12], "texture": "#bud"},
+				"east": {"uv": [7, 9, 11, 12], "texture": "#bud"},
+				"south": {"uv": [7, 9, 11, 12], "texture": "#bud"},
+				"west": {"uv": [7, 9, 11, 12], "texture": "#bud"},
+				"down": {"uv": [7, 9, 11, 12], "texture": "#bud"}
+			}
+		},
+		{
+			"name": "bud_1_core",
+			"from": [6.075, 0.935, 8.165],
+			"to": [7.725, 2.255, 9.815],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [6.9, 1.595, 8.99]},
+			"faces": {
+				"north": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"east": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"south": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"west": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"up": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"down": {"uv": [5, 6, 11, 11], "texture": "#bud"}
+			}
+		},
+		{
+			"name": "bud_1_tip",
+			"from": [6.405, 2.255, 8.495],
+			"to": [7.395, 2.75, 9.485],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [6.9, 1.595, 8.99]},
+			"faces": {
+				"north": {"uv": [7, 4, 11, 7], "texture": "#bud"},
+				"east": {"uv": [7, 4, 11, 7], "texture": "#bud"},
+				"south": {"uv": [7, 4, 11, 7], "texture": "#bud"},
+				"west": {"uv": [7, 4, 11, 7], "texture": "#bud"},
+				"up": {"uv": [7, 4, 11, 7], "texture": "#bud"}
+			}
+		},
+		{
+			"name": "bud_2_lower",
+			"from": [8.5225, 0.495, 8.1925],
+			"to": [9.5675, 0.99, 9.2375],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [9.045, 1.65, 8.715]},
+			"faces": {
+				"north": {"uv": [7, 9, 11, 12], "texture": "#bud"},
+				"east": {"uv": [7, 9, 11, 12], "texture": "#bud"},
+				"south": {"uv": [7, 9, 11, 12], "texture": "#bud"},
+				"west": {"uv": [7, 9, 11, 12], "texture": "#bud"},
+				"down": {"uv": [7, 9, 11, 12], "texture": "#bud"}
+			}
+		},
+		{
+			"name": "bud_2_core",
+			"from": [8.22, 0.99, 7.89],
+			"to": [9.87, 2.31, 9.54],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [9.045, 1.65, 8.715]},
+			"faces": {
+				"north": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"east": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"south": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"west": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"up": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"down": {"uv": [5, 6, 11, 11], "texture": "#bud"}
+			}
+		},
+		{
+			"name": "bud_2_tip",
+			"from": [8.55, 2.31, 8.22],
+			"to": [9.54, 2.805, 9.21],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [9.045, 1.65, 8.715]},
+			"faces": {
+				"north": {"uv": [7, 4, 11, 7], "texture": "#bud"},
+				"east": {"uv": [7, 4, 11, 7], "texture": "#bud"},
+				"south": {"uv": [7, 4, 11, 7], "texture": "#bud"},
+				"west": {"uv": [7, 4, 11, 7], "texture": "#bud"},
+				"up": {"uv": [7, 4, 11, 7], "texture": "#bud"}
+			}
+		},
+		{
+			"name": "bud_3_lower",
+			"from": [7.4775, 0.605, 6.1575],
+			"to": [8.5225, 1.1, 7.2025],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [8, 1.76, 6.68]},
+			"faces": {
+				"north": {"uv": [7, 9, 11, 12], "texture": "#bud"},
+				"east": {"uv": [7, 9, 11, 12], "texture": "#bud"},
+				"south": {"uv": [7, 9, 11, 12], "texture": "#bud"},
+				"west": {"uv": [7, 9, 11, 12], "texture": "#bud"},
+				"down": {"uv": [7, 9, 11, 12], "texture": "#bud"}
+			}
+		},
+		{
+			"name": "bud_3_core",
+			"from": [7.175, 1.1, 5.855],
+			"to": [8.825, 2.42, 7.505],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [8, 1.76, 6.68]},
+			"faces": {
+				"north": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"east": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"south": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"west": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"up": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"down": {"uv": [5, 6, 11, 11], "texture": "#bud"}
+			}
+		},
+		{
+			"name": "bud_3_tip",
+			"from": [7.505, 2.42, 6.185],
+			"to": [8.495, 2.915, 7.175],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [8, 1.76, 6.68]},
+			"faces": {
+				"north": {"uv": [7, 4, 11, 7], "texture": "#bud"},
+				"east": {"uv": [7, 4, 11, 7], "texture": "#bud"},
+				"south": {"uv": [7, 4, 11, 7], "texture": "#bud"},
+				"west": {"uv": [7, 4, 11, 7], "texture": "#bud"},
+				"up": {"uv": [7, 4, 11, 7], "texture": "#bud"}
+			}
+		},
+		{
+			"name": "bud_4_lower",
+			"from": [6.4875, 2.695, 6.6525],
+			"to": [7.5325, 3.19, 7.6975],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [7.01, 3.85, 7.175]},
+			"faces": {
+				"north": {"uv": [7, 9, 11, 12], "texture": "#bud"},
+				"east": {"uv": [7, 9, 11, 12], "texture": "#bud"},
+				"south": {"uv": [7, 9, 11, 12], "texture": "#bud"},
+				"west": {"uv": [7, 9, 11, 12], "texture": "#bud"},
+				"down": {"uv": [7, 9, 11, 12], "texture": "#bud"}
+			}
+		},
+		{
+			"name": "bud_4_core",
+			"from": [6.185, 3.19, 6.35],
+			"to": [7.835, 4.51, 8],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [7.01, 3.85, 7.175]},
+			"faces": {
+				"north": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"east": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"south": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"west": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"up": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"down": {"uv": [5, 6, 11, 11], "texture": "#bud"}
+			}
+		},
+		{
+			"name": "bud_4_tip",
+			"from": [6.515, 4.51, 6.68],
+			"to": [7.505, 5.005, 7.67],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [7.01, 3.85, 7.175]},
+			"faces": {
+				"north": {"uv": [7, 4, 11, 7], "texture": "#bud"},
+				"east": {"uv": [7, 4, 11, 7], "texture": "#bud"},
+				"south": {"uv": [7, 4, 11, 7], "texture": "#bud"},
+				"west": {"uv": [7, 4, 11, 7], "texture": "#bud"},
+				"up": {"uv": [7, 4, 11, 7], "texture": "#bud"}
+			}
+		},
+		{
+			"name": "bud_5_lower",
+			"from": [8.3575, 2.86, 7.8625],
+			"to": [9.4025, 3.355, 8.9075],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [8.88, 4.015, 8.385]},
+			"faces": {
+				"north": {"uv": [7, 9, 11, 12], "texture": "#bud"},
+				"east": {"uv": [7, 9, 11, 12], "texture": "#bud"},
+				"south": {"uv": [7, 9, 11, 12], "texture": "#bud"},
+				"west": {"uv": [7, 9, 11, 12], "texture": "#bud"},
+				"down": {"uv": [7, 9, 11, 12], "texture": "#bud"}
+			}
+		},
+		{
+			"name": "bud_5_core",
+			"from": [8.055, 3.355, 7.56],
+			"to": [9.705, 4.675, 9.21],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [8.88, 4.015, 8.385]},
+			"faces": {
+				"north": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"east": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"south": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"west": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"up": {"uv": [5, 6, 11, 11], "texture": "#bud"},
+				"down": {"uv": [5, 6, 11, 11], "texture": "#bud"}
+			}
+		},
+		{
+			"name": "bud_5_tip",
+			"from": [8.385, 4.675, 7.89],
+			"to": [9.375, 5.17, 8.88],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [8.88, 4.015, 8.385]},
+			"faces": {
+				"north": {"uv": [7, 4, 11, 7], "texture": "#bud"},
+				"east": {"uv": [7, 4, 11, 7], "texture": "#bud"},
+				"south": {"uv": [7, 4, 11, 7], "texture": "#bud"},
+				"west": {"uv": [7, 4, 11, 7], "texture": "#bud"},
+				"up": {"uv": [7, 4, 11, 7], "texture": "#bud"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [44, 45, 0],
+			"translation": [0, 2.75, 2.25],
+			"scale": [0.8, 0.8, 0.8]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [44, 45, 0],
+			"translation": [0, 2.75, 2.25],
+			"scale": [0.8, 0.8, 0.8]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 45, 0],
+			"translation": [1.5, 6.25, -0.25],
+			"scale": [0.95, 0.95, 0.95]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, 45, 0],
+			"translation": [1.5, 6.5, -0.25],
+			"scale": [0.95, 0.95, 0.95]
+		},
+		"ground": {
+			"translation": [0, 2, 0],
+			"scale": [0.6, 0.6, 0.6]
+		},
+		"gui": {
+			"rotation": [15, -152, 0],
+			"translation": [0, 5, 0],
+			"scale": [1.3, 1.3, 1.3]
+		},
+		"fixed": {
+			"rotation": [0, -180, 0],
+			"translation": [0, 6.75, 0],
+			"scale": [1.6, 1.6, 1.6]
+		},
+		"on_shelf": {
+			"translation": [0, 1.25, 0],
+			"scale": [1.9, 1.9, 1.9]
+		}
+	},
+	"groups": [
+		0,
+		1,
+		2,
+		{
+			"name": "Volumetric bud 1",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [3, 4, 5]
+		},
+		{
+			"name": "Volumetric bud 2",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [6, 7, 8]
+		},
+		{
+			"name": "Volumetric bud 3",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [9, 10, 11]
+		},
+		{
+			"name": "Volumetric bud 4",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [12, 13, 14]
+		},
+		{
+			"name": "Volumetric bud 5",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [15, 16, 17]
+		}
+	]
+}
