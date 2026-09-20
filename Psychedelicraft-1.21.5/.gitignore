@@ -1,0 +1,17 @@
+.gradle/
+.settings/
+bin/
+build/
+run/
+generated/
+.classpath
+.project
+*.launch
+/.apt_generated/
+.factorypath
+logs/
+.idea/
+*.iml
+classes/
+out/
+.vscode/launch.json
